@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feaab5f79178d5043a966835b5b7f70a, type: 3}
+  m_Name: Step_8
+  m_EditorClassIdentifier: Assembly-CSharp::StepsController
+  _parts: []
+  _parts_Transform: {fileID: 0}
+  partsDetails:
+  - partPrefab: {fileID: 8860149163616846041, guid: d8b3e95b8427b9e41bb4c0982f87bfd0, type: 3}
+    partImage: {fileID: 21300000, guid: 89bfbd25845820e45b049ce3955799eb, type: 3}
+    part_Scale: {x: 0, y: 0, z: 0}
+    partID: DEV02704_SLIDE_HOUSE
+    _partType: parts
+    instructionClip: {fileID: 0}
+    instructionText: 
+  - partPrefab: {fileID: 8113321107179907217, guid: 4492e1bc24fc3ba4895629c8705cef9e, type: 3}
+    partImage: {fileID: 21300000, guid: 236aef26569bac649978c1280c069fd5, type: 3}
+    part_Scale: {x: 0, y: 0, z: 0}
+    partID: 2031179_PISTON
+    _partType: parts
+    instructionClip: {fileID: 0}
+    instructionText: 
+  asseebleedPart: {fileID: 5100541809172354053, guid: d0dad7c159799be45bce6449dfc834e7, type: 3}
+  assemblyPart: {fileID: 7876850715231442131, guid: ab254427a18ee7f47a4d81e2d1345333, type: 3}

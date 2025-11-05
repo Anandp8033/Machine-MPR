@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feaab5f79178d5043a966835b5b7f70a, type: 3}
+  m_Name: Step_3
+  m_EditorClassIdentifier: Assembly-CSharp::StepsController
+  _parts: []
+  _parts_Transform: {fileID: 0}
+  partsDetails:
+  - partPrefab: {fileID: 829183826025445204, guid: 01f75dfcdc1fb2a42b2b78601a9e5348, type: 3}
+    partImage: {fileID: 21300000, guid: fed0aa0d986ce2e49b4534d69896645b, type: 3}
+    part_Scale: {x: 0, y: 0, z: 0}
+    partID: 2471383_COVER
+    _partType: parts
+    instructionClip: {fileID: 0}
+    instructionText: 
+  - partPrefab: {fileID: 7409878995917383706, guid: d902842220c0f214eab25da4743356ae, type: 3}
+    partImage: {fileID: 21300000, guid: 2ab84a08870d0c14f88f0619ee9f69c1, type: 3}
+    part_Scale: {x: 0, y: 0, z: 0}
+    partID: 463128_BACKUP_RING
+    _partType: parts
+    instructionClip: {fileID: 0}
+    instructionText: 
+  - partPrefab: {fileID: 8329675133360715216, guid: 19bd5d4a7f8cbbe4e8532552bd651bf6, type: 3}
+    partImage: {fileID: 21300000, guid: dc853aadca6412f4696d087c3a029ecc, type: 3}
+    part_Scale: {x: 0, y: 0, z: 0}
+    partID: 420512_O_RING
+    _partType: parts
+    instructionClip: {fileID: 0}
+    instructionText: 
+  - partPrefab: {fileID: 3194012759875874501, guid: a9438d09a86ba9640b9cf2dae1723467, type: 3}
+    partImage: {fileID: 21300000, guid: 3a5d061dd0b36c547ac9694e5d60c94b, type: 3}
+    part_Scale: {x: 0, y: 0, z: 0}
+    partID: 281241_DECOMPRESSION_CONE_TOOL
+    _partType: tools
+    instructionClip: {fileID: 0}
+    instructionText: 
+  - partPrefab: {fileID: 1963083880995361442, guid: 2092fa380e3e07b41b9c422a74339610, type: 3}
+    partImage: {fileID: 21300000, guid: aa4feaf13340d2649a2e21eecc1ee2b8, type: 3}
+    part_Scale: {x: 0, y: 0, z: 0}
+    partID: 281132_COMPRESSION_CONE_TOOL
+    _partType: tools
+    instructionClip: {fileID: 0}
+    instructionText: 
+  - partPrefab: {fileID: 1824993277615524497, guid: f8203b415f30620468d9970124afb603, type: 3}
+    partImage: {fileID: 21300000, guid: 3a5d061dd0b36c547ac9694e5d60c94b, type: 3}
+    part_Scale: {x: 0, y: 0, z: 0}
+    partID: 281143_DECOMPRESSION_CONE_TOOL
+    _partType: tools
+    instructionClip: {fileID: 0}
+    instructionText: 
+  asseebleedPart: {fileID: 3113620940150253538, guid: dddf8461135ac5c43987d1f0baf7b6b1, type: 3}
+  assemblyPart: {fileID: 1892913278923841322, guid: 75a7e99ce71ae52449b1dddf1e22ed79, type: 3}

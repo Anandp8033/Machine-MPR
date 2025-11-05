@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feaab5f79178d5043a966835b5b7f70a, type: 3}
+  m_Name: Step_7
+  m_EditorClassIdentifier: Assembly-CSharp::StepsController
+  _parts: []
+  _parts_Transform: {fileID: 0}
+  partsDetails:
+  - partPrefab: {fileID: 5952863127451119776, guid: 3fbd0a6f6cc62f549a56fe5613ec4b96, type: 3}
+    partImage: {fileID: 21300000, guid: 236aef26569bac649978c1280c069fd5, type: 3}
+    part_Scale: {x: 0, y: 0, z: 0}
+    partID: 2031179_PISTON
+    _partType: parts
+    instructionClip: {fileID: 0}
+    instructionText: 
+  - partPrefab: {fileID: 456085409862429998, guid: 86298531a7b83e44395e5f9c8b1e4f49, type: 3}
+    partImage: {fileID: 21300000, guid: 8f18aa67e5c5d5c4c8b429fcd7f77527, type: 3}
+    part_Scale: {x: 0, y: 0, z: 0}
+    partID: 220129_SLIDE
+    _partType: parts
+    instructionClip: {fileID: 0}
+    instructionText: 
+  asseebleedPart: {fileID: 316139379915654722, guid: 2dd88b91ad8a69d45ab3563f52fcc3e3, type: 3}
+  assemblyPart: {fileID: 5049069026776281053, guid: 83496470e4b673c46878411ec41df714, type: 3}
