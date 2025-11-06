@@ -16,7 +16,9 @@ public class SnapAblePartHandler : MonoBehaviour
     [SerializeField]
     private Material originalmat;
     [SerializeField]
-    private Material transparentHighlightMat; 
+    private Material transparentHighlightMat;
+    [SerializeField]
+    private Material transparentRedHighlightMat;
     public int mainBodyMaterialIndex = 0;
     private Rigidbody _rigidbody;
     public BoxCollider _boxCollider;
@@ -40,14 +42,15 @@ public class SnapAblePartHandler : MonoBehaviour
 
     private void Start()
     {
-      
+        transparentRedHighlightMat = new Material(transparentHighlightMat);
+        transparentRedHighlightMat.color = new Color(1f, 0f, 0f, 50f / 255f);
     }
 
     public void Initialize()
     {
         Debug.Log("SnapAblePartHandler Initialize called for " + meshrenderer.materials.Length);
         //if meshrenderer have multiple materials then assign transparentHighlightMat to mainBodyMaterialIndex
-        if (meshrenderer.materials.Length > 0)
+        if (meshrenderer.materials.Length > 1)
         {
             Debug.Log("SnapAblePartHandler Initialize called for multiple materials ");
             var mats = meshrenderer.materials; 
@@ -94,10 +97,31 @@ public class SnapAblePartHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("OnTriggerEnter called for " + other.gameObject.name);
         PartAttribute otherTag = other.transform.GetComponent<PartAttribute>() as PartAttribute;
         if ((otherTag.partID==snapTagId) && !isSnapped)
         {
             snapAnimation(other.transform);
+        }
+        else if(!isSnapped)
+        {
+            if(other.transform.GetComponent<SnapAblePartHandler>() != null && other.transform.GetComponent<SnapAblePartHandler>().isSnapped)
+            {
+                return; // If the other part is already snapped, do nothing
+            }
+            meshrenderer.material = transparentRedHighlightMat;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        PartAttribute otherTag = other.transform.GetComponent<PartAttribute>() as PartAttribute;
+        if ((otherTag.partID == snapTagId) && !isSnapped)
+        {
+            
+        }else if(!isSnapped)
+        {
+            meshrenderer.material = transparentHighlightMat;
         }
     }
 
@@ -121,6 +145,7 @@ public class SnapAblePartHandler : MonoBehaviour
                 _rigidbody.angularVelocity = Vector3.zero;
             }
             isSnapped = true;
+            _boxCollider.isTrigger = false;
             meshrenderer.material = originalmat;
             otherGM.gameObject.SetActive(false);
             //otherGM.transform.position =otherGM.GetComponent<PartAttribute>().startPos;
@@ -134,28 +159,6 @@ public class SnapAblePartHandler : MonoBehaviour
             OnSnapped?.Invoke(this);
         };
     }
-
-    //private void SnapToZone(Transform otherGM)
-    //{
-    //    // Snap the part to the snap zone's position and rotation using Do Tween animation
-    //    Sequence snapSequence = DOTween.Sequence();
-    //    snapSequence.Append(otherGM.DOMove(snapTarget.transform.position, 0.5f).SetEase(Ease.InOutSine));
-    //    snapSequence.Append(otherGM.DORotateQuaternion(Quaternion.Euler(snapTargetRot), 0.5f).SetEase(Ease.InOutSine));
-
-    //   // otherGM.position = snapTarget.transform.position;
-    //    //otherGM.rotation = Quaternion.Euler(snapTargetRot);
-    //    // Disable physics to prevent further movement
-    //    if (_rigidbody != null)
-    //    {
-    //        _rigidbody.isKinematic = true;
-    //        _rigidbody.linearVelocity = Vector3.zero;
-    //        _rigidbody.angularVelocity = Vector3.zero;
-    //    }
-    //    // Optionally, you can parent the part to the snap zone for better organization
-    //    otherGM.SetParent(snapTarget.transform);
-    //    isSnapped = true;
-    //    meshrenderer.material = originalmat;
-    //}
 
 
 }

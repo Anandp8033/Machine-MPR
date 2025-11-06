@@ -154,7 +154,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a26a778a81460c448443087435779e6, type: 2}
+  - {fileID: 2100000, guid: c89231bce14b12d43b7b5abb829d6808, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -330,7 +330,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a26a778a81460c448443087435779e6, type: 2}
+  - {fileID: 2100000, guid: c89231bce14b12d43b7b5abb829d6808, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1293,13 +1293,13 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a26a778a81460c448443087435779e6, type: 2}
-  - {fileID: 2100000, guid: 2a26a778a81460c448443087435779e6, type: 2}
+  - {fileID: 2100000, guid: c89231bce14b12d43b7b5abb829d6808, type: 2}
+  - {fileID: 2100000, guid: c89231bce14b12d43b7b5abb829d6808, type: 2}
   - {fileID: 8668964879408942006, guid: 6f48e1a3b0f79c3458677a84d11117d0, type: 3}
   - {fileID: -4053520464898690182, guid: 6f48e1a3b0f79c3458677a84d11117d0, type: 3}
   - {fileID: 1038451782150490529, guid: 6f48e1a3b0f79c3458677a84d11117d0, type: 3}
   - {fileID: 4460647416255028466, guid: 6f48e1a3b0f79c3458677a84d11117d0, type: 3}
-  - {fileID: 2100000, guid: 2a26a778a81460c448443087435779e6, type: 2}
+  - {fileID: 2100000, guid: c89231bce14b12d43b7b5abb829d6808, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1653,7 +1653,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a26a778a81460c448443087435779e6, type: 2}
+  - {fileID: 2100000, guid: 240cc749a1a8da444ad151d0cb442b6b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3047,6 +3047,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &5911006474553185738
@@ -3284,7 +3285,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a26a778a81460c448443087435779e6, type: 2}
+  - {fileID: 2100000, guid: 240cc749a1a8da444ad151d0cb442b6b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3370,7 +3371,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a26a778a81460c448443087435779e6, type: 2}
+  - {fileID: 2100000, guid: 240cc749a1a8da444ad151d0cb442b6b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3740,6 +3741,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 6159999921722160633}
   originalmat: {fileID: 2100000, guid: 2a26a778a81460c448443087435779e6, type: 2}
   transparentHighlightMat: {fileID: 2100000, guid: c06da2917d0d35e4084987bfd9506e22, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &7403076028152655547
@@ -3890,8 +3892,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dd1e999b58c2c8544b4bc17708698c1e, type: 2}
-  - {fileID: 2100000, guid: dd1e999b58c2c8544b4bc17708698c1e, type: 2}
+  - {fileID: 2100000, guid: c89231bce14b12d43b7b5abb829d6808, type: 2}
+  - {fileID: 2100000, guid: c89231bce14b12d43b7b5abb829d6808, type: 2}
   - {fileID: 7462332915957261269, guid: 9e34249f3e3c05045921dbae855b08bd, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -3980,7 +3982,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8fc53e0867916124f84797dc3c03250c, type: 2}
+  - {fileID: 2100000, guid: c89231bce14b12d43b7b5abb829d6808, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4618,6 +4620,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 5875097573614193524}
   originalmat: {fileID: 2100000, guid: 07ecd5f2a29061046aff7154f96e07ef, type: 2}
   transparentHighlightMat: {fileID: 2100000, guid: c06da2917d0d35e4084987bfd9506e22, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &8582433244278884621

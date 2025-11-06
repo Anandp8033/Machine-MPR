@@ -440,6 +440,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &488838287967971569
@@ -1215,6 +1216,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &1315487063681043926
@@ -2185,6 +2187,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 6908827813349157377}
   originalmat: {fileID: 2100000, guid: 2dc4b2b568bf0ea47959f55dfa1cda0e, type: 2}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &2682318405104777315
@@ -3384,7 +3387,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8fc53e0867916124f84797dc3c03250c, type: 2}
+  - {fileID: 2100000, guid: c89231bce14b12d43b7b5abb829d6808, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3728,6 +3731,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &4725603692244386949
@@ -4224,6 +4228,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &4963505801779760084
@@ -4572,6 +4577,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &4980628513127866039
@@ -4920,6 +4926,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &5355220493904570436
@@ -5747,6 +5754,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &6268130148162729492

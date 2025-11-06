@@ -608,6 +608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PartAttribute
   partID: 420528_O_RING
   PartNamelabel: {fileID: 690378169442522560, guid: 5497dcd475a5500459ebbbb1c5514d0a, type: 3}
+  partRenderer: {fileID: 0}
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
 --- !u!114 &2083168153863571759
@@ -766,6 +767,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &809083854265423271
@@ -1402,6 +1404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PartAttribute
   partID: 463126_BACKUP_RING
   PartNamelabel: {fileID: 690378169442522560, guid: 5497dcd475a5500459ebbbb1c5514d0a, type: 3}
+  partRenderer: {fileID: 0}
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
 --- !u!114 &6965268641712635705
@@ -1560,6 +1563,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &1732779548382193180
@@ -1725,6 +1729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PartAttribute
   partID: 420528_O_RING
   PartNamelabel: {fileID: 690378169442522560, guid: 5497dcd475a5500459ebbbb1c5514d0a, type: 3}
+  partRenderer: {fileID: 0}
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
 --- !u!114 &8144432803840971328
@@ -1883,6 +1888,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &2383868868882101373
@@ -2019,6 +2025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PartAttribute
   partID: 281132_COMPRESSION_CONE_TOOL
   PartNamelabel: {fileID: 690378169442522560, guid: 5497dcd475a5500459ebbbb1c5514d0a, type: 3}
+  partRenderer: {fileID: 0}
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
 --- !u!114 &8140841298851246209
@@ -2177,6 +2184,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &2620040855151821343
@@ -2931,6 +2939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PartAttribute
   partID: 463126_BACKUP_RING
   PartNamelabel: {fileID: 690378169442522560, guid: 5497dcd475a5500459ebbbb1c5514d0a, type: 3}
+  partRenderer: {fileID: 0}
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
 --- !u!114 &452251823541019527
@@ -3089,6 +3098,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &3712393144347356764
@@ -3455,6 +3465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PartAttribute
   partID: 281240_DECOMPRESSION_CONE_TOOL
   PartNamelabel: {fileID: 690378169442522560, guid: 5497dcd475a5500459ebbbb1c5514d0a, type: 3}
+  partRenderer: {fileID: 0}
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
 --- !u!114 &6145902218256532907
@@ -3613,6 +3624,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &4652782268090863292
@@ -4045,7 +4057,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8fc53e0867916124f84797dc3c03250c, type: 2}
+  - {fileID: 2100000, guid: c89231bce14b12d43b7b5abb829d6808, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4607,6 +4619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PartAttribute
   partID: 2471384_COVER
   PartNamelabel: {fileID: 690378169442522560, guid: 5497dcd475a5500459ebbbb1c5514d0a, type: 3}
+  partRenderer: {fileID: 0}
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
 --- !u!114 &4909854129785043622
@@ -4765,6 +4778,7 @@ MonoBehaviour:
   meshrenderer: {fileID: 0}
   originalmat: {fileID: 0}
   transparentHighlightMat: {fileID: 2100000, guid: 6266ad7aba047e046a3b563e235813ea, type: 2}
+  transparentRedHighlightMat: {fileID: 0}
   mainBodyMaterialIndex: 0
   _boxCollider: {fileID: 0}
 --- !u!1 &6269629196355477427

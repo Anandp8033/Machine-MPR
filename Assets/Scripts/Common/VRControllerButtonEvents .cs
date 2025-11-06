@@ -1,4 +1,5 @@
 using System;
+using Unity.XR.CompositionLayers;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,6 +9,11 @@ using UnityEngine.XR.CompositionLayers;
 public class VRControllerButtonEvents : MonoBehaviour
 {
     public GameObject XROrigin;
+    public GameObject MetaPassThroughLayer;
+
+    public Material defaultSkybox;  
+    private bool isPassthrough = false;
+
     public GameObject sceneAssets;
     public float startDistance = 2f;
     [SerializeField]
@@ -122,79 +128,80 @@ public class VRControllerButtonEvents : MonoBehaviour
 
     private void On_A_ButtonPressed(InputAction.CallbackContext context)
     {
-       Debug.Log("A Button Pressed");
+        //Debug.Log("A Button Pressed");
         RecenterToAsset();
     }
     private void On_A_ButtonReleased(InputAction.CallbackContext context)
     {
-        Debug.Log("A Button Released");
+        //Debug.Log("A Button Released");
     }
     private void On_B_ButtonPressed(InputAction.CallbackContext context)
     {
-        Debug.Log("B Button Pressed");
+        //Debug.Log("B Button Pressed");
+        ToggleMode();
     }
     private void On_B_ButtonReleased(InputAction.CallbackContext context)
     {
-        Debug.Log("B Button Released");
+        //Debug.Log("B Button Released");
     }
 
     private void On_X_ButtonPressed(InputAction.CallbackContext context)
     {
-        Debug.Log("X Button Pressed");
+        //Debug.Log("X Button Pressed");
     }
     private void On_X_ButtonReleased(InputAction.CallbackContext context)
     {
-        Debug.Log("X Button Released");
+        //Debug.Log("X Button Released");
     }
 
     private void On_Y_ButtonPressed(InputAction.CallbackContext context)
     {
-        Debug.Log("Y Button Pressed");
+        //Debug.Log("Y Button Pressed");
     }
     private void On_Y_ButtonReleased(InputAction.CallbackContext context)
     {
-        Debug.Log("Y Button Released");
+       //Debug.Log("Y Button Released");
     }
 
 
     private void OnGripLeftButtonPressed(InputAction.CallbackContext context)
     {
-        Debug.Log("Grip Button left Pressed");
+        //Debug.Log("Grip Button left Pressed");
     }
 
     private void OnGripLeftButtonReleased(InputAction.CallbackContext context)
     {
-        Debug.Log("Grip Button Left Released");
+        //Debug.Log("Grip Button Left Released");
     }
 
     private void OnGripRightButtonPressed(InputAction.CallbackContext context)
     {
-        Debug.Log("Grip Button Right Pressed");
+       // Debug.Log("Grip Button Right Pressed");
     }
 
     private void OnGripRightButtonReleased(InputAction.CallbackContext context)
     {
-        Debug.Log("Grip Button Right Released");
+        //Debug.Log("Grip Button Right Released");
     }
 
     private void OnTriggerLeftButtonPressed(InputAction.CallbackContext context)
     {
-        Debug.Log("Trigger Button left Pressed");
+        //Debug.Log("Trigger Button left Pressed");
     }
 
     private void OnTriggerLeftButtonReleased(InputAction.CallbackContext context)
     {
-        Debug.Log("Trigger Button Left Released");
+       // Debug.Log("Trigger Button Left Released");
     }
 
     private void OnTriggerRightButtonPressed(InputAction.CallbackContext context)
     {
-        Debug.Log("Trigger Button Right Pressed");
+       // Debug.Log("Trigger Button Right Pressed");
     }
 
     private void OnTriggerRightButtonReleased(InputAction.CallbackContext context)
     {
-        Debug.Log("Trigger Button Right Released");
+        //Debug.Log("Trigger Button Right Released");
     }
 
 
@@ -221,6 +228,14 @@ public class VRControllerButtonEvents : MonoBehaviour
         {
             RecenterToAsset();
         }
+    }
+
+    public void ToggleMode()
+    {
+        isPassthrough = !isPassthrough;
+        MetaPassThroughLayer.SetActive(isPassthrough);
+        RenderSettings.skybox = isPassthrough ? null : defaultSkybox;
+        Camera.main.clearFlags = isPassthrough ? CameraClearFlags.SolidColor : CameraClearFlags.Skybox;
     }
 
 }
