@@ -236,6 +236,16 @@ public class VRControllerButtonEvents : MonoBehaviour
         MetaPassThroughLayer.SetActive(isPassthrough);
         RenderSettings.skybox = isPassthrough ? null : defaultSkybox;
         Camera.main.clearFlags = isPassthrough ? CameraClearFlags.SolidColor : CameraClearFlags.Skybox;
+        //also change SolidColor backgroud alpha to 0 when in passthrough
+        if (isPassthrough)
+        {
+            Camera.main.backgroundColor = new Color(0, 0, 0, 0);
+        }
+        else
+        {
+            //also change SolidColor backgroud black alpha to 1 when in passthrough
+            Camera.main.backgroundColor = new Color(0, 0, 0, 1);
+        }
     }
 
 }

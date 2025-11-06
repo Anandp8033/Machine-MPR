@@ -18387,6 +18387,10 @@ PrefabInstance:
       propertyPath: m_ClearFlags
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5963179788012065386, guid: 3cf458834757c354abb408f719ea648d, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6161266796272150665, guid: 3cf458834757c354abb408f719ea648d, type: 3}
       propertyPath: m_IsActive
       value: 0
