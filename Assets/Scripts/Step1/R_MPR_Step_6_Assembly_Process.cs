@@ -39,7 +39,7 @@ public class R_MPR_Step_6_Assembly_Process : StepAssemblyProcessBase
         DisableAllParts();
         Debug.Log("init step 1 ass");
         _UIManager.step_num_text.text = "<size=10>STEP:6</size>";
-        _UIManager.step_num_text.text = "ASSEMBLE HELI-COIL AND PLUG ON TO SLIDE HOUSE.";
+        _UIManager.step_Heading_Text.text = "ASSEMBLE HELI-COIL AND PLUG ON TO SLIDE HOUSE.";
         _UIManager.step_SubHeading_Text.text = "Click and generate DEV02704 SLIDE HOUSE from the panel, grab it from table and move towards highlighted part.";
         step_1();
     }

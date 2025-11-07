@@ -14,20 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StepsController
   _parts: []
   _parts_Transform: {fileID: 0}
-  partsDetails:
-  - partPrefab: {fileID: 8860149163616846041, guid: d8b3e95b8427b9e41bb4c0982f87bfd0, type: 3}
-    partImage: {fileID: 21300000, guid: 89bfbd25845820e45b049ce3955799eb, type: 3}
-    part_Scale: {x: 0, y: 0, z: 0}
-    partID: DEV02704_SLIDE_HOUSE
-    _partType: parts
-    instructionClip: {fileID: 0}
-    instructionText: 
-  - partPrefab: {fileID: 8113321107179907217, guid: 4492e1bc24fc3ba4895629c8705cef9e, type: 3}
-    partImage: {fileID: 21300000, guid: 236aef26569bac649978c1280c069fd5, type: 3}
-    part_Scale: {x: 0, y: 0, z: 0}
-    partID: 2031179_PISTON
-    _partType: parts
-    instructionClip: {fileID: 0}
-    instructionText: 
-  asseebleedPart: {fileID: 5100541809172354053, guid: d0dad7c159799be45bce6449dfc834e7, type: 3}
-  assemblyPart: {fileID: 7876850715231442131, guid: ab254427a18ee7f47a4d81e2d1345333, type: 3}
+  partsDetails: []
+  asseebleedPart: {fileID: 2730325562290085407, guid: 7511f39f6261a4341b8ad718479f01a2, type: 3}
+  assemblyPart: {fileID: 5798487219553690777, guid: ecc75481981d18641a8aff38e7dc1b66, type: 3}

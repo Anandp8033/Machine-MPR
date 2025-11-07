@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: feaab5f79178d5043a966835b5b7f70a, type: 3}
-  m_Name: Step_9
+  m_Name: Step_13
   m_EditorClassIdentifier: Assembly-CSharp::StepsController
   _parts: []
   _parts_Transform: {fileID: 0}
   partsDetails:
-  - partPrefab: {fileID: 8860149163616846041, guid: d8b3e95b8427b9e41bb4c0982f87bfd0, type: 3}
+  - partPrefab: {fileID: 3080675728118937955, guid: 5a2727244f19ad94ea16287062a0bc54, type: 3}
     partImage: {fileID: 21300000, guid: 89bfbd25845820e45b049ce3955799eb, type: 3}
     part_Scale: {x: 0, y: 0, z: 0}
     partID: DEV02704_SLIDE_HOUSE
     _partType: parts
     instructionClip: {fileID: 0}
     instructionText: 
-  - partPrefab: {fileID: 8113321107179907217, guid: 4492e1bc24fc3ba4895629c8705cef9e, type: 3}
-    partImage: {fileID: 21300000, guid: 236aef26569bac649978c1280c069fd5, type: 3}
+  - partPrefab: {fileID: 6657342841521147853, guid: ea89019a3bf2f5f42a465f4fae08c5bd, type: 3}
+    partImage: {fileID: 21300000, guid: dc853aadca6412f4696d087c3a029ecc, type: 3}
     part_Scale: {x: 0, y: 0, z: 0}
-    partID: 2031179_PISTON
+    partID: 420514_O_Ring
     _partType: parts
     instructionClip: {fileID: 0}
     instructionText: 
-  asseebleedPart: {fileID: 5100541809172354053, guid: d0dad7c159799be45bce6449dfc834e7, type: 3}
-  assemblyPart: {fileID: 7876850715231442131, guid: ab254427a18ee7f47a4d81e2d1345333, type: 3}
+  asseebleedPart: {fileID: 8264949276209477685, guid: f6e0dce7d48cdf74e9c7a6591da2a060, type: 3}
+  assemblyPart: {fileID: 4620109369861492870, guid: adfac175404a39840ac6d9aa7e750cfa, type: 3}

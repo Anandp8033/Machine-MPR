@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -51,7 +50,7 @@ public class StepsController : ScriptableObject
     {
         _uiManager?.Show_StepScreen(true);
         assembledPartInstance.SetActive(false);
-        _uiManager?.Show_ToolsAndPartsScreen(true);
+        //_uiManager?.Show_ToolsAndPartsScreen(true);
         //_uiManager?.InstantiatePartsNTools(partsDetails, "parts");
 
         //if(_parts.Count != _parts_Transform.localTransform.Count)

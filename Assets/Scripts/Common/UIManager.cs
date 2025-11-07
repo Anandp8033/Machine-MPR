@@ -74,51 +74,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    //Instantiate Tools and parts items in the ToolsAndPartsScreen as per list provided from StepsController class PartsDetails
-    //public void InstantiatePartsNTools(List<PartsDetails> partsDetails, string typeOfParts)
-    //{
-    //    //Clear previous items except the first child which does not have clone in its name
-    //    foreach (Transform child in partNToolsPrefabParent.transform)
-    //    {
-    //        if(!child.name.Contains("(Clone)"))
-    //            continue;
-    //        Destroy(child.gameObject);
-    //    }
-    //    //Instantiate Tools and parts items in the ToolsAndPartsScreen as per list provided from StepsController class PartsDetails as per passed typeOfParts
-    //    foreach (PartsDetails part in partsDetails)
-    //    {
-    //        if (part._partType == typeOfParts)
-    //        {
-    //            var partNToolsItem = Instantiate(ToolsAndPartsItemsPrefab, partNToolsPrefabParent.transform);
-    //            partNToolsItem.SetActive(true);
-    //            partNToolsItem.transform.GetChild(0).GetComponent<Image>().sprite = part.partImage;
-    //            partNToolsItem.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = part.partID;
-    //            var button = partNToolsItem.GetComponent<Button>();  
-    //            button.onClick.AddListener(() =>
-    //            {
-    //                Debug.Log(part.partID + " clicked");
-    //                //Clear previous gameobject under table if same part is already present then destroy it , only destroy same gameobject not other gameobject
-    //                foreach (Transform child in Table.transform)
-    //                {
-    //                    if (child.transform.GetComponent<PartAttribute>())
-    //                    {
-    //                        Destroy(child.gameObject);
-    //                    }
-    //                }
-    //                //Instantiate the part prefab at the center of the table with no rotation
-    //                var gm =Instantiate(part.partPrefab, Table.transform);
-    //                //gm.GetComponent<Rigidbody>().isKinematic = true; //only for test
-    //                gm.transform.localPosition = new Vector3(0, 1f, 0.311f);
-    //                if(part.part_Scale != Vector3.zero)
-    //                {
-    //                    gm.transform.localScale = part.part_Scale;
-    //                }
-    //                gm.transform.localRotation = Quaternion.identity;
-    //            });
-    //        }
-    //    }
-
-    //}
 
     //Instantiate Tools and parts items inside their saparate screens ToolsScreen and PartsScreen as per list provided from StepsController class PartsDetails
     public void Tools_Items_Instantiate(List<PartsDetails> partsDetails, string typeOfParts)
@@ -146,6 +101,14 @@ public class UIManager : MonoBehaviour
             }
             Destroy(child.gameObject);
         }
+
+        //if partsDetails list is empty then return and close the ToolsScreen
+        if (partsDetails.Count == 0)
+        {
+            ToolsScreen.SetActive(false);
+            return;
+        }
+
         //Instantiate Tools and parts items in the ToolsAndPartsScreen as per list provided from StepsController class PartsDetails as per passed typeOfParts
         foreach (PartsDetails part in partsDetails)
         {
@@ -189,7 +152,8 @@ public class UIManager : MonoBehaviour
                 hoverScript.spawnOffset = ToolsItem.transform;
                 hoverScript.Parts_Size = part.part_Scale;
             }
-        }         
+        }
+        ToolsScreen.SetActive(true);
     }
 
     //UI items generator for parts 
@@ -205,6 +169,14 @@ public class UIManager : MonoBehaviour
             }
             Destroy(child.gameObject);
         }
+
+        //if partsDetails list is empty then return and close the partsScreen
+        if (partsDetails.Count == 0)
+        {
+            PartsScreen.SetActive(false);
+            return;
+        }
+
         //Instantiate Tools and parts items in the ToolsAndPartsScreen as per list provided from StepsController class PartsDetails as per passed typeOfParts
         foreach (PartsDetails part in partsDetails)
         {
@@ -249,33 +221,9 @@ public class UIManager : MonoBehaviour
                 hoverScript.Parts_Size = part.part_Scale;
             }
         }
+        PartsScreen.SetActive(true);
+
     }
-
-
-
-    //enable disable content size fitter on partToolsPrefabParent if under that have more that 8 active children
-    //public void EnableDisableContentSizeFitter()
-    //{
-    //    var contentSizeFitter = partNToolsPrefabParent.GetComponent<ContentSizeFitter>();
-        
-    //    foreach (Transform child in partNToolsPrefabParent.transform)
-    //    {
-    //        if (child.gameObject.activeSelf)
-    //        {
-    //            activeChildCount++;
-    //        }
-    //    }
-    //    if (activeChildCount > 8)
-    //    {
-    //        contentSizeFitter.enabled = true;
-    //        contentSizeFitter.horizontalFit = ContentSizeFitter.FitMode.PreferredSize;
-    //    }
-    //    else
-    //    {
-    //        contentSizeFitter.enabled = false;
-    //        contentSizeFitter.horizontalFit = ContentSizeFitter.FitMode.Unconstrained;
-    //    }
-    //}
 
     public void Show_ToolsAndPartsScreen(bool isActive)
     {

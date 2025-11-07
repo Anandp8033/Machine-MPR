@@ -23,6 +23,22 @@ public class VRControllerButtonEvents : MonoBehaviour
 
     public InputActionAsset inputActions;
 
+    void Start()
+    {
+        xrOrigin = XROrigin.GetComponent<XROrigin>();
+        startPosition = (sceneAssets.transform.position - sceneAssets.transform.forward) * startDistance;
+        Invoke("RecenterToAsset", 0.2f);
+        Invoke("setCameraOnStart", 0.3f);
+    }
+
+    void setCameraOnStart()
+    {
+        RenderSettings.skybox = defaultSkybox;
+        MetaPassThroughLayer.SetActive(isPassthrough);
+        Camera.main.clearFlags = CameraClearFlags.Skybox;
+        Camera.main.backgroundColor = new Color(0, 0, 0, 1);
+    }
+
     void OnEnable()
     {
         // Left Hand Controller
@@ -117,13 +133,6 @@ public class VRControllerButtonEvents : MonoBehaviour
         BSelectAction.canceled -= On_B_ButtonReleased;
         BSelectAction.Enable();
 
-    }
-
-    void Start()
-    {
-        xrOrigin = XROrigin.GetComponent<XROrigin>();
-        startPosition = (sceneAssets.transform.position - sceneAssets.transform.forward) * startDistance;
-        Invoke("RecenterToAsset", 0.2f);
     }
 
     private void On_A_ButtonPressed(InputAction.CallbackContext context)

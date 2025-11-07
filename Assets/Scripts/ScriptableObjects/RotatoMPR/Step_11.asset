@@ -15,40 +15,26 @@ MonoBehaviour:
   _parts: []
   _parts_Transform: {fileID: 0}
   partsDetails:
-  - partPrefab: {fileID: 8742717309099699509, guid: b95d6039e925c3a4bac4a0926cbe7cd6, type: 3}
+  - partPrefab: {fileID: 8377633474288338910, guid: 45ef18e3d7cdda041ac35e275bd28823, type: 3}
     partImage: {fileID: 21300000, guid: 89bfbd25845820e45b049ce3955799eb, type: 3}
     part_Scale: {x: 0, y: 0, z: 0}
     partID: DEV02704_SLIDE_HOUSE
     _partType: parts
     instructionClip: {fileID: 0}
     instructionText: 
-  - partPrefab: {fileID: 3316083445209772549, guid: b9ccee874f71b18488e8aafd1aa074ce, type: 3}
-    partImage: {fileID: 21300000, guid: 4ac98678a4683f34d90fe6753bd32d40, type: 3}
+  - partPrefab: {fileID: 5770320989326188499, guid: b8033215be29112488608ba7edb6009c, type: 3}
+    partImage: {fileID: 21300000, guid: 5c6e6b9e6619b794b880f220cd65a436, type: 3}
     part_Scale: {x: 0, y: 0, z: 0}
-    partID: 207503_GUIDE_PIN
+    partID: 204121_SEAT
     _partType: parts
     instructionClip: {fileID: 0}
     instructionText: 
-  - partPrefab: {fileID: 4194948093509437488, guid: d185c5dc13eb6704b8496d55d3dc7ad7, type: 3}
-    partImage: {fileID: 21300000, guid: 096447ee87176ed44a3d29f4d31a66c3, type: 3}
+  - partPrefab: {fileID: 4929878907027244039, guid: 4daee75bc768b4547a3f448a0cbcedcb, type: 3}
+    partImage: {fileID: 21300000, guid: 7475c72ede59f9e4bb3df22026510cfe, type: 3}
     part_Scale: {x: 0, y: 0, z: 0}
-    partID: 238387_SPRING
+    partID: 223052_SPACER
     _partType: parts
     instructionClip: {fileID: 0}
     instructionText: 
-  - partPrefab: {fileID: 7638483174249970740, guid: 3ce8c08cc95c35a4ea1d67498b440241, type: 3}
-    partImage: {fileID: 21300000, guid: 50b8655164be1ef499b4831582fdb771, type: 3}
-    part_Scale: {x: 0, y: 0, z: 0}
-    partID: 2471384_COVER
-    _partType: parts
-    instructionClip: {fileID: 0}
-    instructionText: 
-  - partPrefab: {fileID: 6041586009349773171, guid: a018c36841f2b534aa7b2e3ecc84fed8, type: 3}
-    partImage: {fileID: 21300000, guid: aa9500aec660aaa41aee0641df7d5cad, type: 3}
-    part_Scale: {x: 0, y: 0, z: 0}
-    partID: 512024_SOCKET_SCREW_DIN912
-    _partType: parts
-    instructionClip: {fileID: 0}
-    instructionText: 
-  asseebleedPart: {fileID: 5527976976766029199, guid: 4f912cc2a94db964fa9d8a46c68ef092, type: 3}
-  assemblyPart: {fileID: 7881614753801971362, guid: 6ac3c0a6c5477d0458611738274925c0, type: 3}
+  asseebleedPart: {fileID: 6263152217123220359, guid: 783747947e9ddef49961bdc42617c920, type: 3}
+  assemblyPart: {fileID: 1920151219684388669, guid: e97582ff3d6aeda43b6dea6817fe6b6b, type: 3}
