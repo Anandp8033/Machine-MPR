@@ -8,6 +8,7 @@ public class SnapAblePartHandler : MonoBehaviour
     public string snapTagId = "";
     public int snapIndex = -1;
     public bool isSnapped = false;
+    private bool snapInProgress = false;
     private GameObject snapTarget;
     public Vector3 startPos;
     public Vector3 startRot;
@@ -48,18 +49,18 @@ public class SnapAblePartHandler : MonoBehaviour
 
     public void Initialize()
     {
-        Debug.Log("SnapAblePartHandler Initialize called for " + meshrenderer.materials.Length);
+       // Debug.Log("SnapAblePartHandler Initialize called for " + meshrenderer.materials.Length);
         //if meshrenderer have multiple materials then assign transparentHighlightMat to mainBodyMaterialIndex
         if (meshrenderer.materials.Length > 1)
         {
-            Debug.Log("SnapAblePartHandler Initialize called for multiple materials ");
+            //Debug.Log("SnapAblePartHandler Initialize called for multiple materials ");
             var mats = meshrenderer.materials; 
             mats[mainBodyMaterialIndex] = transparentHighlightMat; 
             meshrenderer.materials = mats;
         }
         else
         {
-            Debug.Log("SnapAblePartHandler Initialize called for single material ");
+            //Debug.Log("SnapAblePartHandler Initialize called for single material ");
             meshrenderer.material = transparentHighlightMat;
         }
         _boxCollider.isTrigger = true;
@@ -97,6 +98,7 @@ public class SnapAblePartHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (snapInProgress) return;
         Debug.Log("OnTriggerEnter called for " + other.gameObject.name);
         PartAttribute otherTag = other.transform.GetComponent<PartAttribute>() as PartAttribute;
         if ((otherTag.partID==snapTagId) && !isSnapped)
@@ -115,6 +117,7 @@ public class SnapAblePartHandler : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (snapInProgress) return;
         PartAttribute otherTag = other.transform.GetComponent<PartAttribute>() as PartAttribute;
         if ((otherTag.partID == snapTagId) && !isSnapped)
         {
@@ -127,6 +130,9 @@ public class SnapAblePartHandler : MonoBehaviour
 
     private void snapAnimation(Transform otherGM)
     {
+        if (SpawnItemsFromUIList.IsSnapping) return; // optional, double-check
+        SpawnItemsFromUIList.SetSnapping(true);
+        snapInProgress = true;
         otherGM.GetComponent<XRGrabInteractable>().enabled = false; // Disable grabbing during snap
         otherGM.GetComponent<Rigidbody>().isKinematic = true;
         otherGM.GetComponent<Rigidbody>().useGravity = false;
@@ -155,8 +161,14 @@ public class SnapAblePartHandler : MonoBehaviour
             //otherGM.GetComponent<Rigidbody>().useGravity = true;
             //Debug.Log("Snapped other part: " + otherGM.gameObject.name);
             //Debug.Log("this part name :- " + this.gameObject.name);
-            Destroy(otherGM.gameObject,1f);
+            if (otherGM.gameObject.activeInHierarchy)
+            {
+                Destroy(otherGM.gameObject, 1f);
+            }
+            //Destroy(otherGM.gameObject,1f);
+            snapInProgress = false;
             OnSnapped?.Invoke(this);
+            SpawnItemsFromUIList.SetSnapping(false);
         };
     }
 

@@ -20,6 +20,14 @@ public class SpawnItemsFromUIList : XRBaseInteractable ///MonoBehaviour,IPointer
 
     public GameObject TableTransform;
 
+    /// <summary>
+    /// Global(process-wide) lock
+    /// </summary>
+    private static bool s_isSnapping = false;
+    public static bool IsSnapping => s_isSnapping;
+    public static void SetSnapping(bool value) => s_isSnapping = value;
+
+
     //public void OnPointerEnter(PointerEventData eventData)
     //{
     //    Debug.Log("VR Pointer Enter");
@@ -50,6 +58,14 @@ public class SpawnItemsFromUIList : XRBaseInteractable ///MonoBehaviour,IPointer
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
 
+        // Cast to IXRSelectInteractor
+        IXRSelectInteractor currentInteractor = args.interactorObject as IXRSelectInteractor;
+        if (IsSnapping)
+        {
+            Debug.LogWarning("Spawn blocked: a snap is in progress (global).");
+            interactionManager.SelectExit(currentInteractor, this);
+            return;
+        }
         base.OnSelectEntered(args);
         Debug.Log("VR Button Selected");
         //Clear previous gameobject under table if same part is already present then destroy it , only destroy same gameobject not other gameobject
@@ -60,9 +76,6 @@ public class SpawnItemsFromUIList : XRBaseInteractable ///MonoBehaviour,IPointer
                 Destroy(child.gameObject);
             }
         }
-
-        // Cast to IXRSelectInteractor
-        IXRSelectInteractor currentInteractor = args.interactorObject as IXRSelectInteractor;
 
         // Deselect the button itself
 

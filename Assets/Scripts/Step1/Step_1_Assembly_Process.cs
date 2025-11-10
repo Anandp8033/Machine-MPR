@@ -42,7 +42,7 @@ public class Step_1_Assembly_Process : StepAssemblyProcessBase
     {        
         _UIManager = _uiMananger;
         AssignPartsFromChildren();
-        Debug.Log("init step 1 ass");      
+        //Debug.Log("init step 1 ass");      
         _UIManager.step_num_text.text = "<size=10>STEP:1</size>";
         _UIManager.step_Heading_Text.text = "ASSEMBLE,O-RING AND SEALRING ON TO PISTON";
         _UIManager.step_SubHeading_Text.text = "Click and generate 2031179 PISTON from the panel, grab it from table and move towards highlighted part."; 
@@ -91,7 +91,7 @@ public class Step_1_Assembly_Process : StepAssemblyProcessBase
     private void Handler_OnSnapped(SnapAblePartHandler sender)
     {
         Debug.Log("Part snapped: " + sender.snapTagId);
-        snapAbleHandler.OnSnapped -= Handler_OnSnapped;
+        sender.OnSnapped -= Handler_OnSnapped;
         currentStep++;
         StepSwitch();
     }
@@ -159,7 +159,7 @@ public class Step_1_Assembly_Process : StepAssemblyProcessBase
                 Step_15_Comp_Tool_SealRing_L(); 
                 break;
             case 15:
-                Debug.Log("Assembly Process Completed!");
+                //Debug.Log("Assembly Process Completed!");
                 _UIManager.step_SubHeading_Text.text = "Step 1 assembly Process completed.";
                 StepCompleted();
                 break;
@@ -170,7 +170,7 @@ public class Step_1_Assembly_Process : StepAssemblyProcessBase
     // Call this when the step is completed
     private void StepCompleted()
     {
-        Debug.Log("Step_1 Completed");
+        //Debug.Log("Step_1 Completed");
         InvokeStepComplete();
     }
 
@@ -209,14 +209,14 @@ public class Step_1_Assembly_Process : StepAssemblyProcessBase
 
     public void step_5_Comp_Tool_ORing_R()
     {
-        Debug.Log("play animation R_Comp_ORing");
+        //Debug.Log("play animation R_Comp_ORing");
         _animator.Play("Comp_Tool_ORing_R");
     }
 
     public void OnComplete_R_Comp_ORing_Animation()
     {
         _animator.enabled = false;
-        Debug.Log("animation R_Comp_ORing ended");
+        //Debug.Log("animation R_Comp_ORing ended");
         currentStep++;
         //reset the position and rotation of the _281132_COMPRESSION_CONE_TOOL_R
         snapAbleHandler = _281132_COMPRESSION_CONE_TOOL_R.GetComponent<SnapAblePartHandler>();
@@ -256,14 +256,14 @@ public class Step_1_Assembly_Process : StepAssemblyProcessBase
     public void step_8_Comp_Tool_Seal_Ring_R()
     {
         _animator.enabled = true;
-        Debug.Log("play animation R_Comp_Seal_Ring");
+        //Debug.Log("play animation R_Comp_Seal_Ring");
         _animator.Play("Comp_Tool_Seal_Ring_R");
     }
 
     public void OnComplete_R_Comp_SealRing_Animation()
     {
         _animator.enabled = false;
-        Debug.Log("animation R_Comp_Seal_Ring ended");
+        //Debug.Log("animation R_Comp_Seal_Ring ended");
         currentStep++;
         //reset the position and rotation of the _281132_COMPRESSION_CONE_TOOL_R
         snapAbleHandler = _281132_COMPRESSION_CONE_TOOL_R.GetComponent<SnapAblePartHandler>();
@@ -288,7 +288,7 @@ public class Step_1_Assembly_Process : StepAssemblyProcessBase
 
     private void step_9()
     {
-        Debug.Log("step 9");
+        //Debug.Log("step 9");
         _281240_DECOMPRESSION_CONE_TOOL_L.SetActive(true);
         snapAbleHandler = _281240_DECOMPRESSION_CONE_TOOL_L.GetComponent<SnapAblePartHandler>();
         snapAbleHandler.OnSnapped += Handler_OnSnapped;
@@ -297,7 +297,7 @@ public class Step_1_Assembly_Process : StepAssemblyProcessBase
 
     private void step_10()
     {
-        Debug.Log("step 10");
+        //Debug.Log("step 10");
         _420561_O_RING_L1.SetActive(true);
         snapAbleHandler = _420561_O_RING_L1.GetComponent<SnapAblePartHandler>();
         snapAbleHandler.OnSnapped += Handler_OnSnapped;
@@ -315,14 +315,14 @@ public class Step_1_Assembly_Process : StepAssemblyProcessBase
     private void step_12_Comp_Tool_ORing_L()
     {
         _animator.enabled = true;
-        Debug.Log("play animation L_Comp_ORing");
+        //Debug.Log("play animation L_Comp_ORing");
         _animator.Play("Comp_Tool_ORing_L");
     }
 
     public void OnComplete_L_Comp_ORing_Animation()
     {
         _animator.enabled = false;
-        Debug.Log("animation R_Comp_Seal_Ring ended");
+        //Debug.Log("animation R_Comp_Seal_Ring ended");
         currentStep++;
         //reset the position and rotation of the _281132_COMPRESSION_CONE_TOOL_L
         snapAbleHandler = _281132_COMPRESSION_CONE_TOOL_L.GetComponent<SnapAblePartHandler>();
@@ -362,14 +362,14 @@ public class Step_1_Assembly_Process : StepAssemblyProcessBase
     private void Step_15_Comp_Tool_SealRing_L()
     {
         _animator.enabled = true;
-        Debug.Log("play animation L_Comp_Seal_Ring");
+        //Debug.Log("play animation L_Comp_Seal_Ring");
         _animator.Play("Comp_Tool_Seal_Ring_L");
     }
 
     public void OnComplete_L_Comp_SealRing_Animation()
     {
         _animator.enabled = false;
-        Debug.Log("animation L_Comp_Seal_Ring ended");
+        //Debug.Log("animation L_Comp_Seal_Ring ended");
         currentStep++;
         //reset the position and rotation of the _281132_COMPRESSION_CONE_TOOL_L
         snapAbleHandler = _281132_COMPRESSION_CONE_TOOL_L.GetComponent<SnapAblePartHandler>();

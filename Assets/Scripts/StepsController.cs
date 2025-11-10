@@ -37,8 +37,7 @@ public class StepsController : ScriptableObject
         _uiManager?.Show_ToolsAndPartsScreen(false);
         //_uiManager?.PartsBtn.onClick.AddListener(() => _uiManager?.InstantiatePartsNTools(partsDetails, "parts"));
         //_uiManager?.ToolsBtn.onClick.AddListener(() => _uiManager?.InstantiatePartsNTools(partsDetails, "tools"));
-        _uiManager?.Tools_Items_Instantiate(partsDetails, "tools");
-        _uiManager?.Tools_Items_Instantiate(partsDetails, "parts");
+        
         var assembledPartInstance = Instantiate(asseebleedPart, Table.transform);
         assembledPartInstance.GetComponent<AssembledPartAnimationBase>().StartExplodeAnimation(() => { AnimationEnd(assembledPartInstance, Table); });       
 
@@ -49,6 +48,8 @@ public class StepsController : ScriptableObject
     public void AnimationEnd(GameObject assembledPartInstance,GameObject Table)
     {
         _uiManager?.Show_StepScreen(true);
+        _uiManager?.Tools_Items_Instantiate(partsDetails, "tools");
+        _uiManager?.Tools_Items_Instantiate(partsDetails, "parts");
         assembledPartInstance.SetActive(false);
         //_uiManager?.Show_ToolsAndPartsScreen(true);
         //_uiManager?.InstantiatePartsNTools(partsDetails, "parts");
@@ -69,7 +70,7 @@ public class StepsController : ScriptableObject
         _assemblyPartInstance.GetComponent<StepAssemblyProcessBase>().Initialize(_uiManager);
         _assemblyPartInstance.GetComponent<StepAssemblyProcessBase>().OnStepComplete += () => 
         {
-            Debug.Log("Step Completed");
+            //Debug.Log("Step Completed");
             OnStepComplete?.Invoke();
         };
     }

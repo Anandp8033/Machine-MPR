@@ -47,7 +47,7 @@ public class AssemblyManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Assembly Process Completed");
+            //Debug.Log("Assembly Process Completed");
             UIManager.Show_AllStepsCompletedScreen();
         }
     }

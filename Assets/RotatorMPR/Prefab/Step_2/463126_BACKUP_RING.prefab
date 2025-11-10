@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PartAttribute
   partID: 463126_BACKUP_RING
   PartNamelabel: {fileID: 690378169442522560, guid: 5497dcd475a5500459ebbbb1c5514d0a, type: 3}
+  partRenderer: {fileID: 7836196973837256070}
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
 --- !u!114 &4680066552281662874
@@ -503,7 +504,7 @@ GameObject:
   - component: {fileID: 9081959743274180073}
   - component: {fileID: 7836196973837256070}
   m_Layer: 0
-  m_Name: 463126_BACKUP RING
+  m_Name: 463126_BACKUP_RING
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
